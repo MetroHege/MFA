@@ -96,7 +96,7 @@ const verifyTwoFA = async (
       window: 1,
     });
 
-    if (!isValid) {
+    if (isValid == null) {
       next(new CustomError('Invalid 2FA code', 400));
       return;
     }
